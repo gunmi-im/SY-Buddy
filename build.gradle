@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.gunmi.sybuddy'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'javax.persistence:persistence-api:1.0.2'
+    implementation 'org.modelmapper:modelmapper:2.4.4'
+    implementation 'org.springframework:spring-core:6.0.16'
+    implementation 'com.mysql:mysql-connector-j:8.3.0'             // 데이터베이스 관리 라이브러리
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
